@@ -41,8 +41,7 @@ def inference(prompt, temperature, max_length):
         temperature=temperature,
         max_length=max_length,
     )
-    gen_text = tokenizer.batch_decode(gen_tokens)[0]
-    return gen_text
+    return tokenizer.batch_decode(gen_tokens)[0]
 
 
 def autocomplete(plaintext, to_prime=True, temperature=0.8, max_length=300):
